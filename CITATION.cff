@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Creator metadata and the version DOI are pending author approval; until then, cite the exact Git commit used."
+title: "Global oasis exposure analysis"
+authors:
+  - name: "Global Oasis Exposure project"
+abstract: "Code and minimum author-created derived data for verification of a fixed-boundary global oasis exposure assessment."
+license: MIT
+repository-code: "https://github.com/Linjingwu999/global-oasis-exposure"
+keywords:
+  - oasis
+  - climate exposure
+  - spatial block bootstrap
+  - reproducible research

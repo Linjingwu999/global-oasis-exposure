@@ -1,0 +1,9 @@
+name: global-oasis-exposure
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.13
+  - numpy=2.3.5
+  - pandas=2.3.3
+  - openpyxl=3.1.5
+  - pyyaml=6.0.3

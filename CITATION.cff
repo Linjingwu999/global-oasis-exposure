@@ -8,6 +8,7 @@ authors:
 abstract: "Code and minimum author-created derived data for verification of a fixed-boundary global oasis exposure assessment."
 license: MIT
 repository-code: "https://github.com/Linjingwu999/global-oasis-exposure"
+doi: "10.5281/zenodo.21304985"
 version: "1.0.0"
 date-released: "2026-07-11"
 keywords:

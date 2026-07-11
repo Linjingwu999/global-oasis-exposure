@@ -1,5 +1,7 @@
 # Global oasis exposure analysis
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21304984.svg)](https://doi.org/10.5281/zenodo.21304984)
+
 This repository contains the code and minimum author-created derived data needed to verify the principal numerical results of a fixed-boundary global oasis exposure assessment. The study population comprises 3,443 oasis polygons delineated for 2020. Boundary geometries and third-party source rasters are not redistributed.
 
 ## Release status
@@ -60,4 +62,4 @@ This repository does not contain oasis shapefiles, source rasters or NetCDF file
 - Author-created derived data, configuration, and documentation: CC BY 4.0 (`LICENSE-DATA`).
 - Third-party raw data: not redistributed and remain subject to their providers' terms.
 
-Until the Zenodo archive is confirmed and a version DOI is issued, cite release `v1.0.0` or the exact Git commit used. The version DOI will be the citation target for the released snapshot; the concept DOI will identify the evolving repository.
+For exact reproducibility, cite release `v1.0.0` using the version DOI [10.5281/zenodo.21304985](https://doi.org/10.5281/zenodo.21304985). The concept DOI [10.5281/zenodo.21304984](https://doi.org/10.5281/zenodo.21304984) identifies the evolving repository and always resolves to its latest archived version.

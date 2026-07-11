@@ -4,9 +4,7 @@ This repository contains the code and minimum author-created derived data needed
 
 ## Release status
 
-The public repository is complete and independently checkable. A versioned GitHub release and Zenodo DOI are intentionally pending author-approved creator names, order, ORCID identifiers, and affiliations. No DOI has been minted from provisional or guessed creator metadata.
-
-The collective entity in `CITATION.cff` identifies the project only; it is not a substitute for the author-approved Zenodo creator list.
+The public repository is complete and independently checkable. The approved creator metadata for release `v1.0.0` identifies Jingwu Lin as the sole creator of this software and derived-data release. This release metadata does not determine the manuscript author list. No ORCID or private email address is published.
 
 ## Contents
 
@@ -62,4 +60,4 @@ This repository does not contain oasis shapefiles, source rasters or NetCDF file
 - Author-created derived data, configuration, and documentation: CC BY 4.0 (`LICENSE-DATA`).
 - Third-party raw data: not redistributed and remain subject to their providers' terms.
 
-Until a version DOI is issued, cite the exact Git commit used. The future version DOI will be the citation target for a released snapshot; the future concept DOI will identify the evolving repository.
+Until the Zenodo archive is confirmed and a version DOI is issued, cite release `v1.0.0` or the exact Git commit used. The version DOI will be the citation target for the released snapshot; the concept DOI will identify the evolving repository.

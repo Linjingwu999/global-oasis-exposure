@@ -1,7 +1,7 @@
 ﻿domain,product,reference_period,analysis_role,validity_boundary
 Climate class,Koppen-Geiger 1 km,1991-2020,BWh and BWk background classification,"Background climate, not oasis-interior temperature"
 Social,GHS-POP and GHS-BUILT-S,2020,Current population density and built-up share,"Exposure proxy, not causal development or economic performance"
-Aridity,Global Aridity Index v3,Long-term current baseline,Current background aridity,Raw index values scaled by 0.0001
+Aridity,Global Aridity Index v3.1,Long-term current baseline,Current background aridity,Raw index values scaled by 0.0001
 Water climate,TerraClimate,1991-2020,Climatic water deficit,"Background climate, not irrigation demand or groundwater balance"
 Surface water,JRC Global Surface Water,1984-2021,Historical and current water occurrence and stability,Does not quantify future water resources
 Thermal,ERA5-HEAT UTCI,1991-2020,Annual heat- and cold-stress days,"Background outdoor exposure, not oasis-interior microclimate"

@@ -1,5 +1,0 @@
-﻿baseline_id,background_class,feature_count,heat_ge_32c_days_per_year,cold_le_minus13c_days_per_year,exact_background_class
-analysis_release_3437,BWh oases,1822,203.5920836995821,4.825832418587633,BWh_background
-analysis_release_3437,BWk oases,742,64.32663971248877,116.3774483378257,BWk_background
-analysis_release_3437,BWh/BWk oases,131,98.97760814249365,16.45343511450382,mixed_BWh_BWk
-analysis_release_3437,non-BW oases,742,69.28085368174595,86.01949685534592,non_BWh_BWk_background

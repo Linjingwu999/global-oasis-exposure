@@ -1,9 +1,0 @@
-﻿baseline_id,background_class,metric,plot_direction,n_features,q25_days_per_year,median_days_per_year,q75_days_per_year,plot_q25,plot_median,plot_q75,exact_background_class
-analysis_release_3437,BWh oases,heat >=32C,right,1822,164.225,205.3666666666667,240.23333333333335,164.225,205.3666666666667,240.23333333333335,BWh_background
-analysis_release_3437,BWh oases,cold <=-13C,left,1822,0.0,0.9,5.5,-5.5,-0.9,-0.0,BWh_background
-analysis_release_3437,BWk oases,heat >=32C,right,742,10.433333333333335,65.58333333333333,106.7666666666667,10.433333333333335,65.58333333333333,106.7666666666667,BWk_background
-analysis_release_3437,BWk oases,cold <=-13C,left,742,53.1,125.4166666666667,167.80833333333328,-167.80833333333328,-125.4166666666667,-53.1,BWk_background
-analysis_release_3437,BWh/BWk oases,heat >=32C,right,131,59.5,122.0,137.18333333333334,59.5,122.0,137.18333333333334,mixed_BWh_BWk
-analysis_release_3437,BWh/BWk oases,cold <=-13C,left,131,0.5166666666666666,12.4,26.816666666666663,-26.816666666666663,-12.4,-0.5166666666666666,mixed_BWh_BWk
-analysis_release_3437,non-BW oases,heat >=32C,right,742,27.1,62.26666666666667,103.33333333333336,27.1,62.26666666666667,103.33333333333336,non_BWh_BWk_background
-analysis_release_3437,non-BW oases,cold <=-13C,left,742,40.03333333333333,75.55,125.70833333333336,-125.70833333333336,-75.55,-40.03333333333333,non_BWh_BWk_background

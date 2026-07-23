@@ -92,7 +92,7 @@ def run_full_inference(
 ) -> dict[str, Any]:
     """Run the complete primary and support-class orchestration.
 
-    This is opt-in because the release-construction task integrity-checks the
+    This is opt-in because the release integrity check
     approved locked inference and must not silently replace it.
     """
     output_dir = output_dir.resolve()
@@ -120,7 +120,7 @@ def run_full_inference(
             "status": "running",
             "run_fingerprint": fingerprint,
             "parameters": parameters,
-            "tasks": {},
+            "runs": {},
             "outputs": {},
         }
         atomic_bytes(log_path, b"")
@@ -129,18 +129,18 @@ def run_full_inference(
     _append_log(log_path, f"full inference running resume={resume}")
     failures: list[dict[str, str]] = []
 
-    def bootstrap_task(
-        task_id: str,
-        task_key: str,
+    def bootstrap_run(
+        run_id: str,
+        run_key: str,
         row: dict[str, object],
         sample: pd.DataFrame,
         scale_km: int,
         target_valid: int,
     ) -> dict[str, object] | None:
-        safe_id = _safe_name(task_id)
-        result_path = output_dir / "task_results" / f"{safe_id}.json"
+        safe_id = _safe_name(run_id)
+        result_path = output_dir / "run_results" / f"{safe_id}.json"
         checkpoint = output_dir / "checkpoints" / f"{safe_id}.npz"
-        record = state["tasks"].setdefault(task_id, {"status": "pending"})
+        record = state["runs"].setdefault(run_id, {"status": "pending"})
         if (
             resume
             and record.get("status") == "success"
@@ -149,20 +149,20 @@ def run_full_inference(
         ):
             try:
                 result = json.loads(result_path.read_text(encoding="utf-8"))
-                _append_log(log_path, f"task resumed {task_id}")
+                _append_log(log_path, f"run resumed {run_id}")
                 return result
             except (OSError, json.JSONDecodeError):
                 pass
-        record.update({"status": "running", "task_key": task_key})
+        record.update({"status": "running", "run_key": run_key})
         atomic_json(state_path, state)
-        _append_log(log_path, f"task running {task_id}")
+        _append_log(log_path, f"run running {run_id}")
         try:
             result = cluster_bootstrap(
                 sample,
                 row,
                 scale_km=scale_km,
                 target_valid=target_valid,
-                task_key=task_key,
+                run_key=run_key,
                 base_seed=base_seed,
                 checkpoint=checkpoint,
                 resume=resume,
@@ -176,13 +176,13 @@ def run_full_inference(
                 }
             )
             atomic_json(state_path, state)
-            _append_log(log_path, f"task success {task_id}")
+            _append_log(log_path, f"run success {run_id}")
             return result
         except Exception as exc:
             record.update({"status": "failed", "error": f"{type(exc).__name__}: {exc}"})
-            failures.append({"task": task_id, "error": str(exc)})
+            failures.append({"run": run_id, "error": str(exc)})
             atomic_json(state_path, state)
-            _append_log(log_path, f"task failed {task_id} {type(exc).__name__}: {exc}")
+            _append_log(log_path, f"run failed {run_id} {type(exc).__name__}: {exc}")
             return None
 
     primary_rows: list[dict[str, object]] = []
@@ -191,21 +191,21 @@ def run_full_inference(
     for row in contract_records:
         domain = str(row["domain"])
         estimand = str(row["estimand"])
-        task_key = f"main__{domain}__{estimand}__500km"
+        run_key = f"main__{domain}__{estimand}__500km"
         try:
             sample = sample_for_estimand(data, row, scale_km=500)
         except Exception as exc:
-            failures.append({"task": task_key, "error": str(exc)})
+            failures.append({"run": run_key, "error": str(exc)})
             continue
-        result = bootstrap_task(
-            task_key, task_key, row, sample, 500, primary_replicates
+        result = bootstrap_run(
+            run_key, run_key, row, sample, 500, primary_replicates
         )
         if result is None:
             continue
         if result["convergence_status"] == "support_changed_1000_to_full":
-            extended = bootstrap_task(
-                f"{task_key}__extended{primary_extension_replicates}",
-                task_key,
+            extended = bootstrap_run(
+                f"{run_key}__extended{primary_extension_replicates}",
+                run_key,
                 row,
                 sample,
                 500,
@@ -242,23 +242,23 @@ def run_full_inference(
         if primary is None:
             continue
         for scale in (250, 1000):
-            task_key = f"scale__{domain}__{estimand}__{scale}km"
+            run_key = f"scale__{domain}__{estimand}__{scale}km"
             try:
                 sample = sample_for_estimand(data, row, scale_km=scale)
             except Exception as exc:
-                failures.append({"task": task_key, "error": str(exc)})
+                failures.append({"run": run_key, "error": str(exc)})
                 continue
-            result = bootstrap_task(
-                task_key, task_key, row, sample, scale, sensitivity_replicates
+            result = bootstrap_run(
+                run_key, run_key, row, sample, scale, sensitivity_replicates
             )
             if result is None:
                 continue
             if bool(result["ci_supports_nonzero"]) != bool(
                 primary["ci_supports_nonzero"]
             ):
-                extended = bootstrap_task(
-                    f"{task_key}__extended{sensitivity_extension_replicates}",
-                    task_key,
+                extended = bootstrap_run(
+                    f"{run_key}__extended{sensitivity_extension_replicates}",
+                    run_key,
                     row,
                     sample,
                     scale,
@@ -301,7 +301,7 @@ def run_full_inference(
                     }
                 )
             except Exception as exc:
-                failures.append({"task": f"alternative__{estimand}", "error": str(exc)})
+                failures.append({"run": f"alternative__{estimand}", "error": str(exc)})
 
         if estimand in AREA_LONG_TAIL_ESTIMANDS:
             try:
@@ -323,20 +323,20 @@ def run_full_inference(
                     }
                 )
             except Exception as exc:
-                failures.append({"task": f"area_long_tail__{estimand}", "error": str(exc)})
+                failures.append({"run": f"area_long_tail__{estimand}", "error": str(exc)})
 
         if domain == "nex":
-            task_key = f"nex_polygon_only__{estimand}__500km"
+            run_key = f"nex_polygon_only__{estimand}__500km"
             try:
                 polygon_sample = sample_for_estimand(
                     data, row, scale_km=500, polygon_only=True
                 )
             except Exception as exc:
-                failures.append({"task": task_key, "error": str(exc)})
+                failures.append({"run": run_key, "error": str(exc)})
                 continue
-            polygon = bootstrap_task(
-                task_key,
-                task_key,
+            polygon = bootstrap_run(
+                run_key,
+                run_key,
                 row,
                 polygon_sample,
                 500,

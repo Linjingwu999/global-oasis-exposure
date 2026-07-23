@@ -14,8 +14,8 @@ import pandas as pd
 from .estimands import group_statistic, method_weights, point_result
 
 
-def stable_seed(task_key: str, base_seed: int = 20260710) -> int:
-    digest = hashlib.sha256(f"{base_seed}:{task_key}".encode("utf-8")).digest()
+def stable_seed(run_key: str, base_seed: int = 20260710) -> int:
+    digest = hashlib.sha256(f"{base_seed}:{run_key}".encode("utf-8")).digest()
     return int.from_bytes(digest[:8], "little", signed=False)
 
 
@@ -92,7 +92,7 @@ def cluster_bootstrap(
     *,
     scale_km: int,
     target_valid: int,
-    task_key: str,
+    run_key: str,
     base_seed: int = 20260710,
     checkpoint: Path | None = None,
     resume: bool = False,
@@ -116,9 +116,9 @@ def cluster_bootstrap(
     if block_count < 2:
         raise ValueError("At least two occupied spatial blocks are required")
 
-    seed = stable_seed(task_key, base_seed)
+    seed = stable_seed(run_key, base_seed)
     checkpoint_metadata = {
-        "task_key": task_key,
+        "run_key": run_key,
         "scale_km": scale_km,
         "target_valid": target_valid,
         "seed": seed,
@@ -173,7 +173,7 @@ def cluster_bootstrap(
     ci1000_supports_nonzero = bool(ci1000_low > 0 or ci1000_high < 0)
     return {
         **point_result(sample, contract_row),
-        "task_key": task_key,
+        "run_key": run_key,
         "scale_km": scale_km,
         "seed": seed,
         "occupied_blocks": block_count,

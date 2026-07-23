@@ -210,7 +210,7 @@ et0_sd_true_overlap_area_m2,Versioned AI/ET0 true-overlap baseline,ET0-SD valid 
 et0_sd_true_overlap_coverage_ratio,Versioned AI/ET0 true-overlap baseline,ET0-SD valid intersection area divided by polygon spherical area.,derived_source_table,analysis_release_3437
 et0_sd_true_overlap_status,Versioned AI/ET0 true-overlap baseline,ET0-SD true-overlap validity status.,derived_source_table,analysis_release_3437
 et0_sd_true_overlap_reason,Versioned AI/ET0 true-overlap baseline,ET0-SD true-overlap status reason.,derived_source_table,analysis_release_3437
-utci_denominator_method,A023 D15/D16 versioned baseline,"UTCI denominator method: 30 complete years for 3,434 oases or actual valid-year count for the nine D15 records.",derived_source_table,analysis_release_3437
-utci_invalid_years,A023 D15/D16 versioned baseline,Semicolon-separated invalid UTCI years excluded from the oasis-specific denominator; blank for complete records.,derived_source_table,analysis_release_3437
-futurepop_analysis_method,A023 D15/D16 versioned baseline,"FuturePop analysis method: polygon fractional aggregation for 3,186 oases or deterministic nearest valid source grid for 257 oases.",derived_source_table,analysis_release_3437
-futurepop_analysis_valid,A023 D15/D16 versioned baseline,Boolean validity of the D16 unified FuturePop analysis value across four scenario-year combinations.,derived_source_table,analysis_release_3437
+utci_denominator_method,Current scenario analysis baseline,"UTCI denominator method: 30 complete years for 3,434 oases or actual valid-year count for the nine incomplete records.",derived_source_table,analysis_release_3437
+utci_invalid_years,Current scenario analysis baseline,Semicolon-separated invalid UTCI years excluded from the oasis-specific denominator; blank for complete records.,derived_source_table,analysis_release_3437
+futurepop_analysis_method,Current scenario analysis baseline,"FuturePop analysis method: polygon fractional aggregation for 3,186 oases or deterministic nearest valid source grid for 257 oases.",derived_source_table,analysis_release_3437
+futurepop_analysis_valid,Current scenario analysis baseline,Boolean validity of the unified FuturePop analysis value across four scenario-year combinations.,derived_source_table,analysis_release_3437

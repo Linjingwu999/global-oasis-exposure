@@ -1,49 +1,19 @@
 project: global-oasis-exposure
-study_population:
-  year: 2020
-  oasis_count: 3443
-  analysis_regions:
-    - Asia
-    - Africa
-    - North America
-    - South America
-    - Oceania
-comparison:
-  numerator: BWh oases
-  denominator: BWk oases
-inference:
-  base_seed: 20260710
-  primary_block_km: 500
-  sensitivity_block_km: [250, 1000]
-  valid_bootstrap_replicates: 2000
-  multiple_testing: Benjamini-Hochberg FDR within domain
-  default_reproduction_mode: verify_locked_bootstrap_outputs
-expected:
-  estimands: 21
-  robust: 16
-  sensitive: 2
-  not_supported: 3
-  numeric_facts: 29
-  utci_complete: 3434
-  utci_excluded: 9
-  nex_polygon_reducer: 2871
-  nex_representative_point_fallback: 572
-  futurepop_coverage_gt0: 3186
-  futurepop_coverage_ge050: 2252
-  futurepop_no_valid: 257
-  occupied_strict_bwh_bwk_blocks:
-    250: 352
-    500: 148
-    1000: 65
-et0:
-  status: approved_and_retained_raw_unit_caution
-  included_in_primary_estimands: false
-  included_in_numeric_facts: false
-aridity_index:
-  source_field: ai_raw
-  released_field: ai_scaled
-  scale_factor: 0.0001
-release:
-  github_repository: https://github.com/Linjingwu999/global-oasis-exposure
-  github_release: pending_creator_metadata
-  zenodo_doi: pending_creator_metadata
+analysis_population: 3437
+excluded_identifiers: 6
+analysis_regions:
+  - Asia
+  - Africa
+  - North America
+  - South America
+  - Oceania
+comparison: BWh oases minus BWk oases
+primary_block_km: 500
+sensitivity_block_km:
+  - 250
+  - 1000
+multiple_testing: Benjamini-Hochberg FDR within domain
+estimands: 31
+numeric_facts: 39
+ai_scale_factor: 0.0001
+third_party_raw_data_redistributed: false

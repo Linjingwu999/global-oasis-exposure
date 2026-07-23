@@ -1,0 +1,11 @@
+﻿domain,product,reference_period,analysis_role,validity_boundary
+Climate class,Koppen-Geiger 1 km,1991-2020,BWh and BWk background classification,"Background climate, not oasis-interior temperature"
+Social,GHS-POP and GHS-BUILT-S,2020,Current population density and built-up share,"Exposure proxy, not causal development or economic performance"
+Aridity,Global Aridity Index v3.1,Long-term current baseline,Current background aridity,Raw index values scaled by 0.0001
+Water climate,TerraClimate,1991-2020,Climatic water deficit,"Background climate, not irrigation demand or groundwater balance"
+Surface water,JRC Global Surface Water,1984-2021,Historical and current water occurrence and stability,Does not quantify future water resources
+Thermal,ERA5-HEAT UTCI,1991-2020,Annual heat- and cold-stress days,"Background outdoor exposure, not oasis-interior microclimate"
+Future population,FuturePop v0.2 SSP2 and SSP5,2050 and 2080,Coverage-aware descriptive scenario exposure,Not a seamless continuation of GHSL observations
+Future climate,NEX-GDDP-CMIP6 SSP2-4.5 and SSP5-8.5,2041-2070 and 2071-2099,"Fixed-boundary tasmax, tasmin and precipitation change","Not future UTCI, oasis extent or water resources"
+Economy,Kummu gridded GDP v4,2020,Current total and per-capita GDP exposure,Observed economic baseline; field-specific units
+Night lights,VIIRS annual composite,2020,Mean radiance and lit-area fraction,Exposure proxy; not direct economic output

@@ -1,0 +1,5 @@
+﻿exact_background_class,feature_count,polygon_area_km2_geodesic,area_million_km2,color_hex,background_class
+BWh_background,1822,1265408.631813,1.265408631813,#B06A6A,BWh oases
+BWk_background,742,543145.009263,0.543145009263,#4A90A4,BWk oases
+mixed_BWh_BWk,131,320847.985742,0.320847985742,#A6B957,BWh/BWk oases
+non_BWh_BWk_background,742,143279.051668,0.143279051668,#CFC7BC,non-BW oases

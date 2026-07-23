@@ -1,0 +1,23 @@
+{
+  "artifact_id": "05-A084",
+  "figure_id": "Figure 6",
+  "baseline_id": "analysis_release_3437",
+  "selected_register_sha256": "A3347022533D0F2206E753284D82D21A40D21792EB642A5B8738F1C955018C30",
+  "selection_contract_sha256": "5EEB5B2170A8686C543D9B1F68C1E48405C30BD596E0E15D18EAD4A309D05C67",
+  "selected_source_gate": "pass",
+  "png_filename": "Figure6_A084_final.png",
+  "png_sha256": "5C27B767FF3A9BBE8AA0CC232E08296969C0A3822FC768AC8F1E6EBC2E277E42",
+  "svg_filename": "Figure6_A084_final.svg",
+  "svg_sha256": "A8D7DE88B68B03FC37CF74D5AFFE8CF4795DB601A4A27A884C38E4328F71C18F",
+  "source_script_sha256": "51F5DAC7B19A5660262D949614B74A10F5E9877B45A12E399B886F73360008F0",
+  "primary_thresholds": {
+    "UTCImax_greater_equal_celsius": 32,
+    "UTCImin_less_equal_celsius": -13
+  },
+  "threshold_correction": "primary_heat_derived_and_displayed_as_32; cold_and_panel_b_thresholds_unchanged",
+  "author_visual_confirmation": true,
+  "qa_sha256": "BD9BB5D83DCB179BE52302A9B318F0DB179FFD5B601542FA4E4392432BAC1221",
+  "readback_sha256": "8E7D7243EA4B2956A6FD0FA8FBC506F103EB02F9F48D860CCB3BF01B8F601C58",
+  "word_updated": false,
+  "formal_carriers_updated": false
+}

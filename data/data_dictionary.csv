@@ -1,45 +1,216 @@
-field,definition,unit,role,source_product,missing_value,public_file_licence,allowed_interpretation,prohibited_interpretation
-OasisID,Stable oasis-polygon identifier.,text,identifier,Author-derived oasis analysis,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-class_label_en,Public Köppen-Geiger background class label.,category,grouping,Author-derived oasis analysis,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-continent5,Five-continent analysis grouping.,category,grouping,Author-derived oasis analysis,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-area_km2,Geodesic polygon area used for area weighting.,km2,weight,Author-derived oasis analysis,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-block_250km,Deterministic occupied 250-km block identifier.,text,spatial_block,Author-derived oasis analysis,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-block_500km,Deterministic occupied 500-km primary block identifier.,text,spatial_block,Author-derived oasis analysis,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-block_1000km,"Deterministic occupied 1,000-km block identifier.",text,spatial_block,Author-derived oasis analysis,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-ghsl_qc,Module validity flag; values beginning with 'pass' enter the matching estimand.,category,qa_flag,Author-derived oasis analysis,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-ai_qc,Module validity flag; values beginning with 'pass' enter the matching estimand.,category,qa_flag,Author-derived oasis analysis,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-terraclimate_qc,Module validity flag; values beginning with 'pass' enter the matching estimand.,category,qa_flag,TerraClimate,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-jrc_qc,Module validity flag; values beginning with 'pass' enter the matching estimand.,category,qa_flag,Author-derived oasis analysis,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-utci_qc,Module validity flag; values beginning with 'pass' enter the matching estimand.,category,qa_flag,ERA5-HEAT UTCI,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-nex_qc,Module validity flag; values beginning with 'pass' enter the matching estimand.,category,qa_flag,NEX-GDDP-CMIP6,blank/NaN,CC-BY-4.0,Future background climate exposure at fixed 2020 oasis boundaries.,"Not future UTCI, oasis extent, surface water, groundwater, or water resources."
-nex_method,NEX extraction method; used by polygon-only fallback sensitivity.,category,method_flag,NEX-GDDP-CMIP6,blank/NaN,CC-BY-4.0,Future background climate exposure at fixed 2020 oasis boundaries.,"Not future UTCI, oasis extent, surface water, groundwater, or water resources."
-futurepop_coverage,Minimum valid FuturePop coverage ratio used for descriptive thresholds.,share,coverage,FuturePop v0.2,blank/NaN,CC-BY-4.0,Coverage-aware descriptive scenario exposure.,Not a seamless continuation of GHSL observations and not inferential.
-pop_2020_ghsl,GHSL 2020 population total used as a population weight.,persons,weight,GHSL R2023A,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-pop_density_per_km2_polygon_area,Input field for approved estimand(s): ghsl_density_patch_median_log_ratio.,persons km-2,primary_estimand_input,GHSL R2023A,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-built_s_share_of_polygon_area,Input field for approved estimand(s): ghsl_built_share_patch_median_difference.,share,primary_estimand_input,GHSL R2023A,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-ai_scaled,Aridity Index derived from the source integer field as ai_raw * 0.0001.,index,primary_estimand_input,Global Aridity Index v3.1,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-terraclimate_def_1991_2020_mean_annual_mm,Input field for approved estimand(s): terraclimate_def_area_weighted_mean_difference.,mm yr-1,primary_estimand_input,TerraClimate,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-ever_water_fraction,Input field for approved estimand(s): jrc_ever_water_fraction_area_weighted_mean_difference.,share,primary_estimand_input,JRC Global Surface Water v1.4,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-utci_mean_annual_days_max_ge_32c,Input field for approved estimand(s): utci_heat_ge32_patch_median_difference; utci_heat_ge32_population_weighted_mean_difference.,days yr-1,primary_estimand_input,ERA5-HEAT UTCI,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-utci_mean_annual_days_min_le_minus13c,Input field for approved estimand(s): utci_cold_le_minus13_patch_median_difference; utci_cold_le_minus13_population_weighted_mean_difference.,days yr-1,primary_estimand_input,ERA5-HEAT UTCI,blank/NaN,CC-BY-4.0,Use only for the documented fixed-boundary estimand or descriptive role.,Do not infer causality or oasis-interior microclimate from background exposure fields.
-nex_ssp245_2041_2070_tasmax_delta_1995_2014_median,Input field for approved estimand(s): nex_ssp245_2041_2070_tasmax_patch_median_difference.,degC,primary_estimand_input,NEX-GDDP-CMIP6,blank/NaN,CC-BY-4.0,Future background climate exposure at fixed 2020 oasis boundaries.,"Not future UTCI, oasis extent, surface water, groundwater, or water resources."
-nex_ssp245_2041_2070_tasmin_delta_1995_2014_median,Input field for approved estimand(s): nex_ssp245_2041_2070_tasmin_patch_median_difference.,degC,primary_estimand_input,NEX-GDDP-CMIP6,blank/NaN,CC-BY-4.0,Future background climate exposure at fixed 2020 oasis boundaries.,"Not future UTCI, oasis extent, surface water, groundwater, or water resources."
-nex_ssp245_2041_2070_pr_delta_1995_2014_median,Input field for approved estimand(s): nex_ssp245_2041_2070_pr_patch_median_difference.,mm day-1,primary_estimand_input,NEX-GDDP-CMIP6,blank/NaN,CC-BY-4.0,Future background climate exposure at fixed 2020 oasis boundaries.,"Not future UTCI, oasis extent, surface water, groundwater, or water resources."
-nex_ssp245_2071_2099_tasmax_delta_1995_2014_median,Input field for approved estimand(s): nex_ssp245_2071_2099_tasmax_patch_median_difference.,degC,primary_estimand_input,NEX-GDDP-CMIP6,blank/NaN,CC-BY-4.0,Future background climate exposure at fixed 2020 oasis boundaries.,"Not future UTCI, oasis extent, surface water, groundwater, or water resources."
-nex_ssp245_2071_2099_tasmin_delta_1995_2014_median,Input field for approved estimand(s): nex_ssp245_2071_2099_tasmin_patch_median_difference.,degC,primary_estimand_input,NEX-GDDP-CMIP6,blank/NaN,CC-BY-4.0,Future background climate exposure at fixed 2020 oasis boundaries.,"Not future UTCI, oasis extent, surface water, groundwater, or water resources."
-nex_ssp245_2071_2099_pr_delta_1995_2014_median,Input field for approved estimand(s): nex_ssp245_2071_2099_pr_patch_median_difference.,mm day-1,primary_estimand_input,NEX-GDDP-CMIP6,blank/NaN,CC-BY-4.0,Future background climate exposure at fixed 2020 oasis boundaries.,"Not future UTCI, oasis extent, surface water, groundwater, or water resources."
-nex_ssp585_2041_2070_tasmax_delta_1995_2014_median,Input field for approved estimand(s): nex_ssp585_2041_2070_tasmax_patch_median_difference.,degC,primary_estimand_input,NEX-GDDP-CMIP6,blank/NaN,CC-BY-4.0,Future background climate exposure at fixed 2020 oasis boundaries.,"Not future UTCI, oasis extent, surface water, groundwater, or water resources."
-nex_ssp585_2041_2070_tasmin_delta_1995_2014_median,Input field for approved estimand(s): nex_ssp585_2041_2070_tasmin_patch_median_difference.,degC,primary_estimand_input,NEX-GDDP-CMIP6,blank/NaN,CC-BY-4.0,Future background climate exposure at fixed 2020 oasis boundaries.,"Not future UTCI, oasis extent, surface water, groundwater, or water resources."
-nex_ssp585_2041_2070_pr_delta_1995_2014_median,Input field for approved estimand(s): nex_ssp585_2041_2070_pr_patch_median_difference.,mm day-1,primary_estimand_input,NEX-GDDP-CMIP6,blank/NaN,CC-BY-4.0,Future background climate exposure at fixed 2020 oasis boundaries.,"Not future UTCI, oasis extent, surface water, groundwater, or water resources."
-nex_ssp585_2071_2099_tasmax_delta_1995_2014_median,Input field for approved estimand(s): nex_ssp585_2071_2099_tasmax_patch_median_difference.,degC,primary_estimand_input,NEX-GDDP-CMIP6,blank/NaN,CC-BY-4.0,Future background climate exposure at fixed 2020 oasis boundaries.,"Not future UTCI, oasis extent, surface water, groundwater, or water resources."
-nex_ssp585_2071_2099_tasmin_delta_1995_2014_median,Input field for approved estimand(s): nex_ssp585_2071_2099_tasmin_patch_median_difference.,degC,primary_estimand_input,NEX-GDDP-CMIP6,blank/NaN,CC-BY-4.0,Future background climate exposure at fixed 2020 oasis boundaries.,"Not future UTCI, oasis extent, surface water, groundwater, or water resources."
-nex_ssp585_2071_2099_pr_delta_1995_2014_median,Input field for approved estimand(s): nex_ssp585_2071_2099_pr_patch_median_difference.,mm day-1,primary_estimand_input,NEX-GDDP-CMIP6,blank/NaN,CC-BY-4.0,Future background climate exposure at fixed 2020 oasis boundaries.,"Not future UTCI, oasis extent, surface water, groundwater, or water resources."
-pop_ssp2_2050,Coverage-aware future population scenario total within the fixed polygon.,persons,descriptive_fact_input,FuturePop v0.2,blank/NaN,CC-BY-4.0,Coverage-aware descriptive scenario exposure.,Not a seamless continuation of GHSL observations and not inferential.
-pop_ssp2_2080,Coverage-aware future population scenario total within the fixed polygon.,persons,descriptive_fact_input,FuturePop v0.2,blank/NaN,CC-BY-4.0,Coverage-aware descriptive scenario exposure.,Not a seamless continuation of GHSL observations and not inferential.
-pop_ssp5_2050,Coverage-aware future population scenario total within the fixed polygon.,persons,descriptive_fact_input,FuturePop v0.2,blank/NaN,CC-BY-4.0,Coverage-aware descriptive scenario exposure.,Not a seamless continuation of GHSL observations and not inferential.
-pop_ssp5_2080,Coverage-aware future population scenario total within the fixed polygon.,persons,descriptive_fact_input,FuturePop v0.2,blank/NaN,CC-BY-4.0,Coverage-aware descriptive scenario exposure.,Not a seamless continuation of GHSL observations and not inferential.
-et0_qc,ET0 polygon-summary retention/QC flag under the raw/unit-caution rule; ET0 does not enter any released estimand or numeric fact.,category,retained_raw_unit_caution_qc,Global Aridity/ET0 v3.1,blank/NaN,CC-BY-4.0,"Raw/QC retention only; no inferential effect, scaled-unit claim, or manuscript numerical fact.","Do not interpret as a final ET0 unit, water-use estimate, or water-resource conclusion."
-et0_v31_yr_raw_valid_pixel_count,Polygon summary retained under the author-approved ET0 raw/unit-caution rule; not used in the 21 estimands or 29 facts.,count,retained_raw_unit_caution,Global Aridity/ET0 v3.1,blank/NaN,CC-BY-4.0,"Raw/QC retention only; no inferential effect, scaled-unit claim, or manuscript numerical fact.","Do not interpret as a final ET0 unit, water-use estimate, or water-resource conclusion."
-et0_v31_yr_raw_area_weighted_mean_raw,Polygon summary retained under the author-approved ET0 raw/unit-caution rule; not used in the 21 estimands or 29 facts.,unverified raw product unit,retained_raw_unit_caution,Global Aridity/ET0 v3.1,blank/NaN,CC-BY-4.0,"Raw/QC retention only; no inferential effect, scaled-unit claim, or manuscript numerical fact.","Do not interpret as a final ET0 unit, water-use estimate, or water-resource conclusion."
-et0_v31_yr_sd_raw_valid_pixel_count,Polygon summary retained under the author-approved ET0 raw/unit-caution rule; not used in the 21 estimands or 29 facts.,count,retained_raw_unit_caution,Global Aridity/ET0 v3.1,blank/NaN,CC-BY-4.0,"Raw/QC retention only; no inferential effect, scaled-unit claim, or manuscript numerical fact.","Do not interpret as a final ET0 unit, water-use estimate, or water-resource conclusion."
-et0_v31_yr_sd_raw_area_weighted_mean_raw,Polygon summary retained under the author-approved ET0 raw/unit-caution rule; not used in the 21 estimands or 29 facts.,unverified raw product unit,retained_raw_unit_caution,Global Aridity/ET0 v3.1,blank/NaN,CC-BY-4.0,"Raw/QC retention only; no inferential effect, scaled-unit claim, or manuscript numerical fact.","Do not interpret as a final ET0 unit, water-use estimate, or water-resource conclusion."
+field,field_group,description,source_path,baseline_id
+OasisID,Core oasis identity and area,,derived_source_table,analysis_release_3437
+region,Core oasis identity and area,,derived_source_table,analysis_release_3437
+region_code,Core oasis identity and area,,derived_source_table,analysis_release_3437
+continent5,Core oasis identity and area,,derived_source_table,analysis_release_3437
+feature_index,Core oasis identity and area,,derived_source_table,analysis_release_3437
+admin0_dominant_name,Natural Earth/admin0 country assignment QA,,derived_source_table,analysis_release_3437
+country_qc,Natural Earth/admin0 country assignment QA,Module-specific QC status; use this field to define valid samples for that module.,derived_source_table,analysis_release_3437
+hydrobasins_qc,HydroBASINS L06 basin assignment QA,Module-specific QC status; use this field to define valid samples for that module.,derived_source_table,analysis_release_3437
+polygon_area_km2_geodesic,Core oasis identity and area,,derived_source_table,analysis_release_3437
+exact_background_class,Core oasis identity and area,,derived_source_table,analysis_release_3437
+class_label_en,Core oasis identity and area,,derived_source_table,analysis_release_3437
+kg_qc,Koppen-Geiger background classification and coverage QA,Module-specific QC status; use this field to define valid samples for that module.,derived_source_table,analysis_release_3437
+ghsl_qc,GHSL 2020 population and built-up exposure QA,Module-specific QC status; use this field to define valid samples for that module.,derived_source_table,analysis_release_3437
+jrc_qc,JRC Global Surface Water v1.4,Module-specific QC status; use this field to define valid samples for that module.,derived_source_table,analysis_release_3437
+terraclimate_qc,TerraClimate 1991-2020 climatology,Module-specific QC status; use this field to define valid samples for that module.,provider_metadata,analysis_release_3437
+ai_qc,Global Aridity Index v3.1,Current AI validity status under the adopted true polygon-cell overlap method.,derived_source_table,analysis_release_3437
+et0_qc,Global Aridity/ET0 v3.1,Current ET0 and ET0-SD validity status under the adopted true polygon-cell overlap method.,derived_source_table,analysis_release_3437
+utci_qc,ERA5-HEAT UTCI 1991-2020 exposure,Module-specific QC status; use this field to define valid samples for that module.,derived_source_table| derived_source_table,analysis_release_3437
+nex_qc,NEX-GDDP-CMIP6 future background climate,Module-specific QC status; use this field to define valid samples for that module.,provider_metadata,analysis_release_3437
+nex_method,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+futurepop_coverage,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,Minimum valid FuturePop coverage ratio across SSP2/SSP5 and 2050/2080.,provider_metadata,analysis_release_3437
+futurepop_qc,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,Module-specific QC status; use this field to define valid samples for that module.,provider_metadata,analysis_release_3437
+gdp_qc,Kummu gridded GDP v4 2020 and derived current economic exposure,Module-specific QC status; use this field to define valid samples for that module.,derived_source_table,analysis_release_3437
+viirs_qc,VIIRS 2020 night-time lights,Module-specific QC status; use this field to define valid samples for that module.,derived_source_table,analysis_release_3437
+country,Core oasis identity and area,,derived_source_table,analysis_release_3437
+area_km2,Core oasis identity and area,,derived_source_table,analysis_release_3437
+kg_main_class,Koppen-Geiger background classification and coverage QA,,derived_source_table,analysis_release_3437
+kg_status,Koppen-Geiger background classification and coverage QA,,derived_source_table,analysis_release_3437
+pop_2020_ghsl,Core oasis identity and area,,derived_source_table,analysis_release_3437
+built_s_2020_m2,GHSL 2020 population and built-up exposure QA,,derived_source_table,analysis_release_3437
+aridity_ai_qc,Core oasis identity and area,Current AI validity status under the adopted true polygon-cell overlap method.,derived_source_table,analysis_release_3437
+kg_intersection_area_km2,Koppen-Geiger background classification and coverage QA,,derived_source_table,analysis_release_3437
+kg_coverage_share_of_polygon,Koppen-Geiger background classification and coverage QA,,derived_source_table,analysis_release_3437
+dominant_code,Core oasis identity and area,,derived_source_table,analysis_release_3437
+dominant_class,Core oasis identity and area,,derived_source_table,analysis_release_3437
+kg_master_role,Koppen-Geiger background classification and coverage QA,,derived_source_table,analysis_release_3437
+BWh_area_km2,Core oasis identity and area,,derived_source_table,analysis_release_3437
+BWk_area_km2,Core oasis identity and area,,derived_source_table,analysis_release_3437
+BWh_BWk_area_km2,Core oasis identity and area,,derived_source_table,analysis_release_3437
+BWh_share_of_polygon,Core oasis identity and area,,derived_source_table,analysis_release_3437
+BWk_share_of_polygon,Core oasis identity and area,,derived_source_table,analysis_release_3437
+BWh_BWk_share_of_polygon,Core oasis identity and area,,derived_source_table,analysis_release_3437
+qa_low_coverage_lt_0_999,Koppen-Geiger background classification and coverage QA,,derived_source_table,analysis_release_3437
+qa_very_low_coverage_lt_0_95,Koppen-Geiger background classification and coverage QA,,derived_source_table,analysis_release_3437
+qa_coverage_missing_area_km2,Core oasis identity and area,,derived_source_table,analysis_release_3437
+admin0_assignment_method,Natural Earth/admin0 country assignment QA,,derived_source_table,analysis_release_3437
+admin0_assignment_note,Natural Earth/admin0 country assignment QA,,derived_source_table,analysis_release_3437
+qa_admin0_no_match,Core oasis identity and area,,derived_source_table,analysis_release_3437
+qa_admin0_original_no_match,Core oasis identity and area,,derived_source_table,analysis_release_3437
+hybas06_dominant_id,HydroBASINS L06 basin assignment QA,,derived_source_table,analysis_release_3437
+hybas06_dominant_name,HydroBASINS L06 basin assignment QA,,derived_source_table,analysis_release_3437
+hybas06_dominant_share,HydroBASINS L06 basin assignment QA,,derived_source_table,analysis_release_3437
+qa_hybas06_no_match,Core oasis identity and area,,derived_source_table,analysis_release_3437
+pop_sum_2020,GHSL 2020 population and built-up exposure QA,,derived_source_table,analysis_release_3437
+pop_valid_pixel_count,Core oasis identity and area,,derived_source_table,analysis_release_3437
+pop_nonzero_pixel_count,Core oasis identity and area,,derived_source_table,analysis_release_3437
+built_s_sum_2020_m2,GHSL 2020 population and built-up exposure QA,,derived_source_table,analysis_release_3437
+built_s_valid_pixel_count,GHSL 2020 population and built-up exposure QA,,derived_source_table,analysis_release_3437
+built_s_nonzero_pixel_count,GHSL 2020 population and built-up exposure QA,,derived_source_table,analysis_release_3437
+built_s_sum_2020_km2,GHSL 2020 population and built-up exposure QA,,derived_source_table,analysis_release_3437
+pop_density_per_km2_polygon_area,Core oasis identity and area,,derived_source_table,analysis_release_3437
+built_s_share_of_polygon_area,GHSL 2020 population and built-up exposure QA,,derived_source_table,analysis_release_3437
+center_grid_pixel_count,Core oasis identity and area,,derived_source_table,analysis_release_3437
+qa_center_pixel_count_zero,Core oasis identity and area, [previous_baseline diagnostic; not current extraction rule],derived_source_table,analysis_release_3437
+ai_v31_yr_raw_valid_pixel_count,Global Aridity Index v3.1,Current baseline count of valid cells with nonzero polygon intersection under true polygon-cell overlap area weighting.,derived_source_table,analysis_release_3437
+ai_v31_yr_raw_area_weighted_mean_raw,Global Aridity Index v3.1,Current baseline AI raw weighted mean using exact nonzero polygon-cell overlap area; interpret only after multiplying by 0.0001.,derived_source_table,analysis_release_3437
+qa_ai_v31_yr_raw_center_pixel_count_zero,Core oasis identity and area, [previous_baseline diagnostic; not current extraction rule],derived_source_table,analysis_release_3437
+qa_ai_v31_yr_raw_all_touched_valid_pixel_count_if_center_empty,Core oasis identity and area, [previous_baseline diagnostic; not current extraction rule],derived_source_table,analysis_release_3437
+et0_v31_yr_raw_valid_pixel_count,Global Aridity/ET0 v3.1,Current baseline ET0 valid intersecting-cell count under true polygon-cell overlap area weighting.,derived_source_table,analysis_release_3437
+et0_v31_yr_raw_area_weighted_mean_raw,Global Aridity/ET0 v3.1,"Current baseline ET0 weighted mean under true polygon-cell overlap area weighting; total mm per year, 1970-2000 annual average.",derived_source_table,analysis_release_3437
+qa_et0_v31_yr_raw_center_pixel_count_zero,Core oasis identity and area, [previous_baseline diagnostic; not current extraction rule],derived_source_table,analysis_release_3437
+qa_et0_v31_yr_raw_all_touched_valid_pixel_count_if_center_empty,Core oasis identity and area, [previous_baseline diagnostic; not current extraction rule],derived_source_table,analysis_release_3437
+et0_v31_yr_sd_raw_valid_pixel_count,Global Aridity/ET0 v3.1,Current baseline ET0-SD valid intersecting-cell count under true polygon-cell overlap area weighting.,derived_source_table,analysis_release_3437
+et0_v31_yr_sd_raw_area_weighted_mean_raw,Global Aridity/ET0 v3.1,"Area-weighted mean of cell-level ET0 annual-average SD; descriptive only, not propagated aggregate uncertainty.",derived_source_table,analysis_release_3437
+qa_et0_v31_yr_sd_raw_center_pixel_count_zero,Core oasis identity and area, [previous_baseline diagnostic; not current extraction rule],derived_source_table,analysis_release_3437
+qa_et0_v31_yr_sd_raw_all_touched_valid_pixel_count_if_center_empty,Core oasis identity and area, [previous_baseline diagnostic; not current extraction rule],derived_source_table,analysis_release_3437
+ai_scaled,Global Aridity Index v3.1,Current Aridity Index: AI_scaled = AI_raw * 0.0001 using true polygon-cell overlap area weighting.,derived_source_table,analysis_release_3437
+ever_water_area_m2,JRC Global Surface Water v1.4,,derived_source_table,analysis_release_3437
+permanent_water_area_m2,JRC Global Surface Water v1.4,,derived_source_table,analysis_release_3437
+seasonal_water_area_m2,JRC Global Surface Water v1.4,,derived_source_table,analysis_release_3437
+pixel_area_m2,Core oasis identity and area,,derived_source_table,analysis_release_3437
+ever_water_fraction,JRC Global Surface Water v1.4,,derived_source_table,analysis_release_3437
+permanent_water_fraction,JRC Global Surface Water v1.4,,derived_source_table,analysis_release_3437
+seasonal_water_fraction,JRC Global Surface Water v1.4,,derived_source_table,analysis_release_3437
+occurrence_area_weighted_pct,Core oasis identity and area,,derived_source_table,analysis_release_3437
+seasonality_area_weighted_months,Core oasis identity and area,,derived_source_table,analysis_release_3437
+recurrence_area_weighted_pct,Core oasis identity and area,,derived_source_table,analysis_release_3437
+_merge,Core oasis identity and area,,derived_source_table,analysis_release_3437
+jrc_join_missing,JRC Global Surface Water v1.4,True when the module source table did not join to the historical source inventory.,derived_source_table,analysis_release_3437
+gdp2020_total_analysis_2017_int_usd,Kummu gridded GDP v4 2020 and derived current economic exposure,,derived_source_table,analysis_release_3437
+gdp2020_pc_ppp2021_int_usd_area_mean,Kummu gridded GDP v4 2020 and derived current economic exposure,,derived_source_table,analysis_release_3437
+gdp2020_total_analysis_per_ghsl_pop2020,Kummu gridded GDP v4 2020 and derived current economic exposure,,derived_source_table,analysis_release_3437
+gdp2020_total_analysis_fill_flag,Kummu gridded GDP v4 2020 and derived current economic exposure,,derived_source_table,analysis_release_3437
+gdp2020_total_analysis_was_filled,Kummu gridded GDP v4 2020 and derived current economic exposure,,derived_source_table,analysis_release_3437
+viirs2020_avg_masked_rad_mean,VIIRS 2020 night-time lights,,derived_source_table,analysis_release_3437
+viirs2020_avg_masked_rad_median,VIIRS 2020 night-time lights,,derived_source_table,analysis_release_3437
+viirs2020_avg_masked_rad_p90,VIIRS 2020 night-time lights,,derived_source_table,analysis_release_3437
+viirs2020_lit_area_fraction,VIIRS 2020 night-time lights,,derived_source_table,analysis_release_3437
+viirs2020_sum_proxy_rad_km2,VIIRS 2020 night-time lights,,derived_source_table,analysis_release_3437
+qa_viirs2020_lit_fraction_zero,Core oasis identity and area,,derived_source_table,analysis_release_3437
+viirs_qc_tier,VIIRS 2020 night-time lights,,derived_source_table,analysis_release_3437
+gdp_viirs_join_missing,Kummu gridded GDP v4 2020 and derived current economic exposure,True when the module source table did not join to the historical source inventory.,derived_source_table,analysis_release_3437
+terraclimate_ppt_1991_2020_mean_annual_mm,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_ppt_1991_2020_mean_annual_mm_std,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_ppt_1991_2020_mean_annual_mm_min,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_ppt_1991_2020_mean_annual_mm_max,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_ppt_1991_2020_mean_annual_mm_valid_years,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_pet_1991_2020_mean_annual_mm,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_pet_1991_2020_mean_annual_mm_std,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_pet_1991_2020_mean_annual_mm_min,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_pet_1991_2020_mean_annual_mm_max,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_pet_1991_2020_mean_annual_mm_valid_years,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_aet_1991_2020_mean_annual_mm,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_aet_1991_2020_mean_annual_mm_std,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_aet_1991_2020_mean_annual_mm_min,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_aet_1991_2020_mean_annual_mm_max,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_aet_1991_2020_mean_annual_mm_valid_years,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_def_1991_2020_mean_annual_mm,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_def_1991_2020_mean_annual_mm_std,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_def_1991_2020_mean_annual_mm_min,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_def_1991_2020_mean_annual_mm_max,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_def_1991_2020_mean_annual_mm_valid_years,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_soil_1991_2020_mean_monthly_mm,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_soil_1991_2020_mean_monthly_mm_std,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_soil_1991_2020_mean_monthly_mm_min,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_soil_1991_2020_mean_monthly_mm_max,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_soil_1991_2020_mean_monthly_mm_valid_years,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_ppt_minus_pet_1991_2020_mean_annual_mm,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_ppt_minus_aet_1991_2020_mean_annual_mm,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+qa_any_terraclimate_missing,Core oasis identity and area,,derived_source_table,analysis_release_3437
+qa_any_terraclimate_incomplete_years,Core oasis identity and area,,derived_source_table,analysis_release_3437
+qa_any_terraclimate_missing_or_incomplete,Core oasis identity and area,,derived_source_table,analysis_release_3437
+qa_any_terraclimate_physical_negative,Core oasis identity and area,,derived_source_table,analysis_release_3437
+terraclimate_join_missing,TerraClimate 1991-2020 climatology,True when the module source table did not join to the historical source inventory.,provider_metadata,analysis_release_3437
+utci_valid_year_count,ERA5-HEAT UTCI 1991-2020 exposure,,derived_source_table| derived_source_table,analysis_release_3437
+utci_mean_annual_days_max_ge_32c,ERA5-HEAT UTCI 1991-2020 exposure,,derived_source_table| derived_source_table,analysis_release_3437
+utci_mean_annual_days_max_ge_38c,ERA5-HEAT UTCI 1991-2020 exposure,,derived_source_table| derived_source_table,analysis_release_3437
+utci_mean_annual_days_max_ge_46c,ERA5-HEAT UTCI 1991-2020 exposure,,derived_source_table| derived_source_table,analysis_release_3437
+utci_mean_annual_days_min_le_minus13c,ERA5-HEAT UTCI 1991-2020 exposure,,derived_source_table| derived_source_table,analysis_release_3437
+utci_mean_annual_days_min_le_minus27c,ERA5-HEAT UTCI 1991-2020 exposure,,derived_source_table| derived_source_table,analysis_release_3437
+utci_mean_annual_days_min_le_minus40c,ERA5-HEAT UTCI 1991-2020 exposure,,derived_source_table| derived_source_table,analysis_release_3437
+utci_join_missing,ERA5-HEAT UTCI 1991-2020 exposure,True when the module source table did not join to the historical source inventory.,derived_source_table| derived_source_table,analysis_release_3437
+nex_row_count,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_core_all_null_row_count,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_fallback_row_count,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_unresolved_null_row_count,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_model_count_effective_min,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_model_count_effective_max,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_scenario_window_count,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_stat_method_set,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp245_2041_2070_tasmax_abs_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp245_2041_2070_tasmin_abs_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp245_2041_2070_pr_abs_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp245_2041_2070_tasmax_delta_1995_2014_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp245_2041_2070_tasmin_delta_1995_2014_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp245_2041_2070_pr_delta_1995_2014_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp245_2071_2099_tasmax_abs_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp245_2071_2099_tasmin_abs_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp245_2071_2099_pr_abs_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp245_2071_2099_tasmax_delta_1995_2014_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp245_2071_2099_tasmin_delta_1995_2014_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp245_2071_2099_pr_delta_1995_2014_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp585_2041_2070_tasmax_abs_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp585_2041_2070_tasmin_abs_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp585_2041_2070_pr_abs_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp585_2041_2070_tasmax_delta_1995_2014_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp585_2041_2070_tasmin_delta_1995_2014_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp585_2041_2070_pr_delta_1995_2014_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp585_2071_2099_tasmax_abs_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp585_2071_2099_tasmin_abs_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp585_2071_2099_pr_abs_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp585_2071_2099_tasmax_delta_1995_2014_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp585_2071_2099_tasmin_delta_1995_2014_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_ssp585_2071_2099_pr_delta_1995_2014_median,NEX-GDDP-CMIP6 future background climate,,provider_metadata,analysis_release_3437
+nex_join_missing,NEX-GDDP-CMIP6 future background climate,True when the module source table did not join to the historical source inventory.,provider_metadata,analysis_release_3437
+pop_ssp2_2050,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,,provider_metadata,analysis_release_3437
+pop_ssp2_2080,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,,provider_metadata,analysis_release_3437
+pop_ssp5_2050,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,,provider_metadata,analysis_release_3437
+pop_ssp5_2080,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,,provider_metadata,analysis_release_3437
+pop_ssp2_2050_valid_coverage_ratio,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,,provider_metadata,analysis_release_3437
+pop_ssp2_2080_valid_coverage_ratio,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,,provider_metadata,analysis_release_3437
+pop_ssp5_2050_valid_coverage_ratio,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,,provider_metadata,analysis_release_3437
+pop_ssp5_2080_valid_coverage_ratio,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,,provider_metadata,analysis_release_3437
+worldpop_min_valid_coverage_ratio,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,,provider_metadata,analysis_release_3437
+qa_any_worldpop_no_valid_pixels,Core oasis identity and area,,derived_source_table,analysis_release_3437
+qa_any_worldpop_low_valid_coverage_095,Core oasis identity and area,,derived_source_table,analysis_release_3437
+qa_any_worldpop_below_099_coverage,Core oasis identity and area,,derived_source_table,analysis_release_3437
+futurepop_join_missing,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,True when the module source table did not join to the historical source inventory.,provider_metadata,analysis_release_3437
+futurepop_coverage_gt0,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,,provider_metadata,analysis_release_3437
+futurepop_coverage_ge025,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,,provider_metadata,analysis_release_3437
+futurepop_coverage_ge050,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,,provider_metadata,analysis_release_3437
+futurepop_coverage_ge095,WorldPop FuturePop SSP2/SSP5 exposure and coverage QA,,provider_metadata,analysis_release_3437
+data_baseline_id,Versioned AI/ET0 true-overlap baseline,Versioned data baseline identifier bound to every row.,derived_source_table,analysis_release_3437
+ai_et0_extraction_method,Versioned AI/ET0 true-overlap baseline,exactextract 0.3.0 exact nonzero coverage fraction multiplied by spherical cell area (m2).,derived_source_table,analysis_release_3437
+ai_et0_geometry_repaired,Versioned AI/ET0 true-overlap baseline,Whether invalid source geometry required structure-preserving make_valid before extraction.,derived_source_table,analysis_release_3437
+ai_et0_geometry_repair_method,Versioned AI/ET0 true-overlap baseline,Geometry repair method; no coordinate simplification.,derived_source_table,analysis_release_3437
+ai_true_overlap_valid_cell_count,Versioned AI/ET0 true-overlap baseline,AI valid grid cells with nonzero polygon overlap.,derived_source_table,analysis_release_3437
+ai_true_overlap_area_m2,Versioned AI/ET0 true-overlap baseline,AI valid polygon-cell intersection area in square metres.,derived_source_table,analysis_release_3437
+ai_true_overlap_coverage_ratio,Versioned AI/ET0 true-overlap baseline,AI valid intersection area divided by polygon spherical area.,derived_source_table,analysis_release_3437
+ai_true_overlap_status,Versioned AI/ET0 true-overlap baseline,AI true-overlap validity status.,derived_source_table,analysis_release_3437
+ai_true_overlap_reason,Versioned AI/ET0 true-overlap baseline,AI true-overlap status reason.,derived_source_table,analysis_release_3437
+et0_true_overlap_valid_cell_count,Versioned AI/ET0 true-overlap baseline,ET0 valid grid cells with nonzero polygon overlap.,derived_source_table,analysis_release_3437
+et0_true_overlap_area_m2,Versioned AI/ET0 true-overlap baseline,ET0 valid polygon-cell intersection area in square metres.,derived_source_table,analysis_release_3437
+et0_true_overlap_coverage_ratio,Versioned AI/ET0 true-overlap baseline,ET0 valid intersection area divided by polygon spherical area.,derived_source_table,analysis_release_3437
+et0_true_overlap_status,Versioned AI/ET0 true-overlap baseline,ET0 true-overlap validity status.,derived_source_table,analysis_release_3437
+et0_true_overlap_reason,Versioned AI/ET0 true-overlap baseline,ET0 true-overlap status reason.,derived_source_table,analysis_release_3437
+et0_sd_true_overlap_valid_cell_count,Versioned AI/ET0 true-overlap baseline,ET0-SD valid grid cells with nonzero polygon overlap.,derived_source_table,analysis_release_3437
+et0_sd_true_overlap_area_m2,Versioned AI/ET0 true-overlap baseline,ET0-SD valid polygon-cell intersection area in square metres.,derived_source_table,analysis_release_3437
+et0_sd_true_overlap_coverage_ratio,Versioned AI/ET0 true-overlap baseline,ET0-SD valid intersection area divided by polygon spherical area.,derived_source_table,analysis_release_3437
+et0_sd_true_overlap_status,Versioned AI/ET0 true-overlap baseline,ET0-SD true-overlap validity status.,derived_source_table,analysis_release_3437
+et0_sd_true_overlap_reason,Versioned AI/ET0 true-overlap baseline,ET0-SD true-overlap status reason.,derived_source_table,analysis_release_3437
+utci_denominator_method,A023 D15/D16 versioned baseline,"UTCI denominator method: 30 complete years for 3,434 oases or actual valid-year count for the nine D15 records.",derived_source_table,analysis_release_3437
+utci_invalid_years,A023 D15/D16 versioned baseline,Semicolon-separated invalid UTCI years excluded from the oasis-specific denominator; blank for complete records.,derived_source_table,analysis_release_3437
+futurepop_analysis_method,A023 D15/D16 versioned baseline,"FuturePop analysis method: polygon fractional aggregation for 3,186 oases or deterministic nearest valid source grid for 257 oases.",derived_source_table,analysis_release_3437
+futurepop_analysis_valid,A023 D15/D16 versioned baseline,Boolean validity of the D16 unified FuturePop analysis value across four scenario-year combinations.,derived_source_table,analysis_release_3437

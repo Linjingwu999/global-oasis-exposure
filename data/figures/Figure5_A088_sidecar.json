@@ -1,0 +1,28 @@
+{
+  "artifact_id": "05-A088",
+  "figure_id": "Figure 5",
+  "baseline_id": "analysis_release_3437",
+  "selected_register_sha256": "A3347022533D0F2206E753284D82D21A40D21792EB642A5B8738F1C955018C30",
+  "selected_source_gate": "pass",
+  "png_filename": "Figure5_A088_final.png",
+  "png_sha256": "453C356590296DD6185CE2BE22B841AB781727DE3DFE59FD861BCC37AED75255",
+  "svg_filename": "Figure5_A088_final.svg",
+  "svg_sha256": "5E3AD62A6D89472252142A85A3AD40581F4DB344887E5BB8AC888773E25BBAC7",
+  "source_script_sha256": "48C896014CA2D3B4B8472BB216838FF9441739C67350590946B05D03DD9C3AEA",
+  "confirmed_parent_artwork_sha256": "453C356590296DD6185CE2BE22B841AB781727DE3DFE59FD861BCC37AED75255",
+  "unit_correction": {
+    "from": "mm mo^-1",
+    "to": "mm",
+    "carriers": [
+      "MATRIX_METRICS",
+      "TABLE_TERRACLIMATE"
+    ],
+    "data_values_changed": false,
+    "pixel_diff_changed_pixels": 0
+  },
+  "qa_status": "pass",
+  "qa_sha256": "FD50B813584BAD871A5AA66882A191E4720F99311FC54D822E5B115D95818243",
+  "readback_sha256": "6DE5F63149619ACEEED0A44D039F914E03103342D4277FDB6CABFBD6E4BA46C9",
+  "temporal_scope": "current_historical_only",
+  "future_nex_layer": false
+}

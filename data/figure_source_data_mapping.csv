@@ -1,0 +1,9 @@
+figure_id,source_files,status,scope
+Figure 1,figures/not_redistributed_schematic,current_3437_mapping,boundary and workflow schematic; no source data file redistributed
+Figure 2,figures/Figure2_Polygon.csv;figures/Figure2_Summary.csv,current_3437_mapping,spatial points and class counts/areas
+Figure 3,figures/Figure3_AreaBins.csv;figures/Figure3_ClassSummary.csv;figures/Figure3_Polygon.csv,current_3437_mapping,"area bins, class summaries, and polygon records"
+Figure 4,figures/Figure4_Polygon.csv;figures/Figure4_Summary.csv,current_3437_mapping,social and economic descriptive source data
+Figure 5,figures/Figure5_plot_data.csv,current_3437_mapping,author-confirmed water-condition plot data
+Figure 6,figures/Figure6_A_Centroids.csv;figures/Figure6_A_Points.csv;figures/Figure6_B_Thresholds.csv;figures/Figure6_C_IQR.csv,current_3437_mapping,author-confirmed UTCI descriptive plot data
+Figure 7,figures/Figure7_ClassSummary.csv;figures/Figure7_Polygon.csv;figures/Figure7_RegionSummary.csv,current_3437_mapping,future population descriptive source data
+Figure 8,figures/Figure8_Polygon.csv;figures/Figure8_Summary.csv,current_3437_mapping,future background climate descriptive source data

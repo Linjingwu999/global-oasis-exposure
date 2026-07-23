@@ -1,0 +1,19 @@
+﻿baseline_id,display_region,background_class,source_region_labels,source_region_count,feature_count,heat_ge_32c_days_per_year,cold_le_minus13c_days_per_year,exact_background_class
+analysis_release_3437,Asia,BWh oases,Asia,1,666,228.4621121121121,5.64994994994995,BWh_background
+analysis_release_3437,Asia,BWk oases,Asia,1,536,57.74745024875622,141.39322139303482,BWk_background
+analysis_release_3437,Asia,BWh/BWk oases,Asia,1,36,131.2287037037037,29.733333333333334,mixed_BWh_BWk
+analysis_release_3437,Asia,non-BW oases,Asia,1,349,65.04154727793696,99.58853868194844,non_BWh_BWk_background
+analysis_release_3437,Africa,BWh oases,Africa,1,891,200.39670781893005,4.4320239431350545,BWh_background
+analysis_release_3437,Africa,BWk oases,Africa,1,66,123.00909090909092,32.18585858585858,BWk_background
+analysis_release_3437,Africa,BWh/BWk oases,Africa,1,47,103.05460992907805,15.523404255319146,mixed_BWh_BWk
+analysis_release_3437,Africa,non-BW oases,Africa,1,92,107.63333333333333,30.79746376811594,non_BWh_BWk_background
+analysis_release_3437,North America,BWh oases,North America,1,183,166.75409836065575,5.765938069216757,BWh_background
+analysis_release_3437,North America,BWk oases,North America,1,101,77.83894389438944,67.23861386138613,BWk_background
+analysis_release_3437,North America,BWh/BWk oases,North America,1,19,130.99473684210525,17.52456140350877,mixed_BWh_BWk
+analysis_release_3437,North America,non-BW oases,North America,1,288,61.33935185185185,90.17916666666666,non_BWh_BWk_background
+analysis_release_3437,South America,BWh oases,South America,1,47,71.28226950354612,0.5304964539007092,BWh_background
+analysis_release_3437,South America,BWk oases,South America,1,39,20.446153846153848,42.30598290598291,BWk_background
+analysis_release_3437,South America,BWh/BWk oases,South America,1,29,31.357471264367817,0.7735632183908048,mixed_BWh_BWk
+analysis_release_3437,South America,non-BW oases,South America,1,8,29.75833333333334,33.1375,non_BWh_BWk_background
+analysis_release_3437,Oceania,BWh oases,Oceania,1,35,181.97932858967343,0.02190476190476189,BWh_background
+analysis_release_3437,Oceania,non-BW oases,Oceania,1,5,180.1653530377668,0.0,non_BWh_BWk_background

@@ -1,16 +1,12 @@
 cff-version: 1.2.0
-message: "If you use this software and derived-data release, please cite the version specified below."
-title: "Global oasis exposure analysis"
+message: "If you use this derived-data release candidate, please cite the associated manuscript and release record when available."
+title: "Global oasis exposure analysis: 3,437-oasis analysis release"
 authors:
   - family-names: "Lin"
     given-names: "Jingwu"
-    affiliation: "Xinjiang Institute of Ecology and Geography, Chinese Academy of Sciences, Urumqi 830011, China; University of Chinese Academy of Sciences, Beijing 100049, China"
-abstract: "Code and minimum author-created derived data for verification of a fixed-boundary global oasis exposure assessment."
 license: MIT
 repository-code: "https://github.com/Linjingwu999/global-oasis-exposure"
-doi: "10.5281/zenodo.21304985"
-version: "1.0.0"
-date-released: "2026-07-11"
+version: "3437-analysis-candidate"
 keywords:
   - oasis
   - climate exposure

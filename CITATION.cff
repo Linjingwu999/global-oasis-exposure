@@ -1,12 +1,23 @@
 cff-version: 1.2.0
-message: "If you use this derived-data release candidate, please cite the associated manuscript and release record when available."
+message: "If you use this derived-data release, please cite the associated manuscript and this release record."
 title: "Global oasis exposure analysis: 3,437-oasis analysis release"
 authors:
   - family-names: "Lin"
     given-names: "Jingwu"
-license: MIT
+license:
+  - MIT
+  - CC-BY-4.0
 repository-code: "https://github.com/Linjingwu999/global-oasis-exposure"
-version: "3437-analysis-candidate"
+version: "1.1.0"
+doi: "10.5281/zenodo.21304984"
+date-released: "2026-07-27"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21304984"
+    description: "Concept DOI. Always resolves to the most recent version of this release; cite this one unless a specific version is required."
+  - type: doi
+    value: "10.5281/zenodo.21304985"
+    description: "Version DOI for v1.0.0, the superseded 3,443-oasis / 21-estimand release."
 keywords:
   - oasis
   - climate exposure

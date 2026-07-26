@@ -13,5 +13,7 @@ No third-party raw raster, NetCDF, archive, or boundary-geometry file is redistr
 | ERA5-HEAT UTCI | 1991–2020 background heat- and cold-stress days | [Di Napoli et al.](https://doi.org/10.1002/gdj3.102) |
 | FuturePop v0.2 | Coverage-aware SSP2/SSP5 descriptive population scenarios | [WorldPop](https://doi.org/10.5258/SOTON/WP00849) |
 | NEX-GDDP-CMIP6 | Future background tasmax, tasmin, and precipitation exposure | [Thrasher et al.](https://doi.org/10.1038/s41597-022-01393-4) |
+| Kummu gridded GDP v4 | 2020 total and per-capita GDP exposure, in 2017 PPP international dollars | [Kummu, Kosonen and Masoumzadeh Sayyar](https://doi.org/10.1038/s41597-025-04487-x); [dataset](https://doi.org/10.5281/zenodo.18429133) |
+| EOG VIIRS Annual VNL v2.1 | 2020 mean masked radiance and lit-area fraction | [Elvidge et al.](https://doi.org/10.3390/rs13050922) |
 
 The files `data/source_product_manifest_current.csv` and `data/third_party_product_boundary.csv` record the version or period, analysis role, provider/citation boundary, and redistribution status for each product. Nothing in the MIT or CC BY 4.0 licences grants rights in third-party source products.

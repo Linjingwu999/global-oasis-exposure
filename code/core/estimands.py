@@ -14,7 +14,8 @@ def q_pass(series: pd.Series) -> pd.Series:
     return series.astype("string").str.lower().str.startswith("pass", na=False)
 
 
-def qa_field_for(source_field: str) -> str:
+def qa_field_for(source_field: str) -> str | None:
+    """Return the QC column gating this source field, or None if it is ungated."""
     if source_field.startswith(("pop_density_", "built_s_")):
         return "ghsl_qc"
     if source_field == "ai_scaled":
@@ -27,6 +28,22 @@ def qa_field_for(source_field: str) -> str:
         return "utci_qc"
     if source_field.startswith("nex_"):
         return "nex_qc"
+    if source_field.startswith("gdp2020"):
+        return "gdp_qc"
+    if source_field.startswith("viirs2020"):
+        return "viirs_qc"
+    if source_field.startswith("et0_"):
+        return "et0_qc"
+    if source_field.startswith("pop_ssp"):
+        # Deliberately ungated. `futurepop_qc` is a *coverage diagnostic*, not an
+        # inclusion criterion: only 545 of 3,437 oases carry a value starting with
+        # "pass" (`pass_coverage_ge099_all`), so routing it through `q_pass` would
+        # silently impose a >=0.99 coverage gate and drop 84% of the sample. The
+        # locked primary analysis applies no quality gate to the FuturePop
+        # estimands; gating them reproduces a rejected sensitivity variant
+        # (n = 362/71) rather than the published effects. Coverage is reported and
+        # varied deliberately in the sensitivity analysis instead.
+        return None
     raise ValueError(f"No QA field is registered for {source_field}")
 
 
@@ -107,10 +124,11 @@ def sample_for_estimand(
     required = {
         "class_label_en",
         source_field,
-        qa_field,
         f"block_{scale_km}km",
         "area_km2",
     }
+    if qa_field is not None:
+        required.add(qa_field)
     if method == "population_weighted_mean_difference":
         required.add("pop_2020_ghsl")
     missing = sorted(required - set(data.columns))
@@ -120,7 +138,8 @@ def sample_for_estimand(
     values = pd.to_numeric(data[source_field], errors="coerce")
     mask = data["class_label_en"].isin(STRICT_CLASSES)
     mask &= values.notna()
-    mask &= q_pass(data[qa_field])
+    if qa_field is not None:
+        mask &= q_pass(data[qa_field])
     if method == "population_weighted_mean_difference":
         population = pd.to_numeric(data["pop_2020_ghsl"], errors="coerce")
         mask &= population.notna() & (population >= 0)
@@ -162,8 +181,15 @@ def point_result(sample: pd.DataFrame, contract_row: Mapping[str, object]) -> di
 
 
 def compute_point_estimands(
-    data: pd.DataFrame, contract: pd.DataFrame
+    data: pd.DataFrame, contract: pd.DataFrame, *, strict: bool = True
 ) -> tuple[pd.DataFrame, list[dict[str, str]]]:
+    """Compute every point estimand in the contract.
+
+    By default a failure on any estimand raises. Silently returning a short
+    results frame alongside an unchecked ``failures`` list let ten of the
+    thirty-one estimands fail unnoticed; ``strict=True`` makes that loud.
+    Pass ``strict=False`` only when the caller inspects ``failures`` itself.
+    """
     results: list[dict[str, object]] = []
     failures: list[dict[str, str]] = []
     for row in contract.to_dict("records"):
@@ -171,5 +197,19 @@ def compute_point_estimands(
             sample = sample_for_estimand(data, row)
             results.append(point_result(sample, row))
         except Exception as exc:
-            failures.append({"estimand": str(row.get("estimand", "")), "error": str(exc)})
+            failures.append(
+                {
+                    "fact_id": str(row.get("fact_id", "")),
+                    "estimand": str(row.get("estimand", "")),
+                    "source_field": str(row.get("source_field", "")),
+                    "error": str(exc),
+                }
+            )
+    if strict and failures:
+        detail = "; ".join(
+            f"{f['fact_id'] or f['estimand']}: {f['error']}" for f in failures
+        )
+        raise RuntimeError(
+            f"{len(failures)} of {len(contract)} estimands failed to compute -> {detail}"
+        )
     return pd.DataFrame(results), failures

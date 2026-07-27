@@ -8,7 +8,7 @@ authors:
 abstract: "Code and minimum author-created derived data for verification of a fixed-boundary global oasis exposure assessment, covering 3,437 oases and 31 primary estimands. Code is released under the MIT licence; the author-created derived data and documentation are released under CC BY 4.0, as stated in LICENSE-DATA. No third-party raw raster, reanalysis or boundary-geometry file is redistributed."
 license: MIT
 repository-code: "https://github.com/Linjingwu999/global-oasis-exposure"
-version: "1.1.0"
+version: "1.1.2"
 date-released: "2026-07-27"
 keywords:
   - oasis

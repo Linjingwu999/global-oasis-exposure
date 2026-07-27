@@ -46,3 +46,7 @@ OasisID values in this public release belong to the current 3,437-oasis analysis
 ## Release scope
 
 This release contains derived summaries and verification code only; provider-controlled source products and boundary geometries remain excluded.
+
+## Archive
+
+The versioned release archive is preserved by Zenodo. Use the concept DOI to resolve the latest version: <https://doi.org/10.5281/zenodo.21304984>.

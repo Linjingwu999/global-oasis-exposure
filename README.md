@@ -1,6 +1,6 @@
-# Global oasis exposure: 3,437-oasis analysis — v1.1.4
+# Global oasis exposure: 3,437-oasis analysis — v1.1.5
 
-This repository contains the minimum author-created derived data and non-graphical analysis modules for the v1.1.4 3,437-oasis analysis population.
+This repository contains the minimum author-created derived data and non-graphical analysis modules for the v1.1.5 3,437-oasis analysis population.
 
 ## Included
 

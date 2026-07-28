@@ -1,6 +1,6 @@
 # Reproduction workflow
 
-**Release:** global oasis exposure — v1.1.4 local public candidate (3,437-oasis analysis)
+**Release:** global oasis exposure — v1.1.5 (3,437-oasis analysis)
 **Baseline identifier:** `analysis_release_3437` (carried by every shipped record)
 
 This document states what a third party can verify from the files in this

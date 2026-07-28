@@ -109,7 +109,7 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help=(
             f"Additionally re-draw the cluster bootstrap for all {EXPECTED_ESTIMANDS} "
-            "estimands, re-deriving the 95% intervals and FDR q-values instead of "
+            "estimands, re-deriving the 95%% intervals and FDR q-values instead of "
             "verifying the locked ledger. Slow; opt-in by design."
         ),
     )

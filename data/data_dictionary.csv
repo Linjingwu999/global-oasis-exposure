@@ -101,27 +101,27 @@ viirs2020_sum_proxy_rad_km2,VIIRS 2020 night-time lights,,derived_source_table,a
 qa_viirs2020_lit_fraction_zero,Core oasis identity and area,,derived_source_table,analysis_release_3437
 viirs_qc_tier,VIIRS 2020 night-time lights,,derived_source_table,analysis_release_3437
 gdp_viirs_join_missing,Kummu gridded GDP v4 2020 and derived current economic exposure,True when the module source table did not join to the historical source inventory.,derived_source_table,analysis_release_3437
-terraclimate_ppt_1991_2020_mean_annual_mm,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_ppt_1991_2020_mean_annual_mm,TerraClimate 1991-2020 climatology,"mm yr^-1; Figure 5 class value is oasis-area-weighted",provider_metadata,analysis_release_3437
 terraclimate_ppt_1991_2020_mean_annual_mm_std,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
 terraclimate_ppt_1991_2020_mean_annual_mm_min,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
 terraclimate_ppt_1991_2020_mean_annual_mm_max,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
 terraclimate_ppt_1991_2020_mean_annual_mm_valid_years,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
-terraclimate_pet_1991_2020_mean_annual_mm,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_pet_1991_2020_mean_annual_mm,TerraClimate 1991-2020 climatology,"mm yr^-1; Figure 5 class value is oasis-area-weighted",provider_metadata,analysis_release_3437
 terraclimate_pet_1991_2020_mean_annual_mm_std,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
 terraclimate_pet_1991_2020_mean_annual_mm_min,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
 terraclimate_pet_1991_2020_mean_annual_mm_max,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
 terraclimate_pet_1991_2020_mean_annual_mm_valid_years,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
-terraclimate_aet_1991_2020_mean_annual_mm,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_aet_1991_2020_mean_annual_mm,TerraClimate 1991-2020 climatology,"mm yr^-1; Figure 5 class value is oasis-area-weighted",provider_metadata,analysis_release_3437
 terraclimate_aet_1991_2020_mean_annual_mm_std,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
 terraclimate_aet_1991_2020_mean_annual_mm_min,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
 terraclimate_aet_1991_2020_mean_annual_mm_max,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
 terraclimate_aet_1991_2020_mean_annual_mm_valid_years,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
-terraclimate_def_1991_2020_mean_annual_mm,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_def_1991_2020_mean_annual_mm,TerraClimate 1991-2020 climatology,"mm yr^-1; Figure 5 class value is oasis-area-weighted",provider_metadata,analysis_release_3437
 terraclimate_def_1991_2020_mean_annual_mm_std,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
 terraclimate_def_1991_2020_mean_annual_mm_min,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
 terraclimate_def_1991_2020_mean_annual_mm_max,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
 terraclimate_def_1991_2020_mean_annual_mm_valid_years,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
-terraclimate_soil_1991_2020_mean_monthly_mm,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
+terraclimate_soil_1991_2020_mean_monthly_mm,TerraClimate 1991-2020 climatology,"mm; Figure 5 class value is oasis-area-weighted",provider_metadata,analysis_release_3437
 terraclimate_soil_1991_2020_mean_monthly_mm_std,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
 terraclimate_soil_1991_2020_mean_monthly_mm_min,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
 terraclimate_soil_1991_2020_mean_monthly_mm_max,TerraClimate 1991-2020 climatology,,provider_metadata,analysis_release_3437
@@ -134,10 +134,10 @@ qa_any_terraclimate_missing_or_incomplete,Core oasis identity and area,,derived_
 qa_any_terraclimate_physical_negative,Core oasis identity and area,,derived_source_table,analysis_release_3437
 terraclimate_join_missing,TerraClimate 1991-2020 climatology,True when the module source table did not join to the historical source inventory.,provider_metadata,analysis_release_3437
 utci_valid_year_count,ERA5-HEAT UTCI 1991-2020 exposure,,derived_source_table| derived_source_table,analysis_release_3437
-utci_mean_annual_days_max_ge_32c,ERA5-HEAT UTCI 1991-2020 exposure,,derived_source_table| derived_source_table,analysis_release_3437
+utci_mean_annual_days_max_ge_32c,ERA5-HEAT UTCI 1991-2020 exposure,"days yr^-1; Figure 6 primary heat threshold uses the lower-order oasis-unit median and IQR at >=32 degC",derived_source_table| derived_source_table,analysis_release_3437
 utci_mean_annual_days_max_ge_38c,ERA5-HEAT UTCI 1991-2020 exposure,,derived_source_table| derived_source_table,analysis_release_3437
 utci_mean_annual_days_max_ge_46c,ERA5-HEAT UTCI 1991-2020 exposure,,derived_source_table| derived_source_table,analysis_release_3437
-utci_mean_annual_days_min_le_minus13c,ERA5-HEAT UTCI 1991-2020 exposure,,derived_source_table| derived_source_table,analysis_release_3437
+utci_mean_annual_days_min_le_minus13c,ERA5-HEAT UTCI 1991-2020 exposure,"days yr^-1; Figure 6 primary cold threshold uses the lower-order oasis-unit median and IQR at <=-13 degC",derived_source_table| derived_source_table,analysis_release_3437
 utci_mean_annual_days_min_le_minus27c,ERA5-HEAT UTCI 1991-2020 exposure,,derived_source_table| derived_source_table,analysis_release_3437
 utci_mean_annual_days_min_le_minus40c,ERA5-HEAT UTCI 1991-2020 exposure,,derived_source_table| derived_source_table,analysis_release_3437
 utci_join_missing,ERA5-HEAT UTCI 1991-2020 exposure,True when the module source table did not join to the historical source inventory.,derived_source_table| derived_source_table,analysis_release_3437
@@ -210,5 +210,11 @@ et0_sd_true_overlap_area_m2,Versioned AI/ET0 true-overlap baseline,ET0-SD valid 
 et0_sd_true_overlap_coverage_ratio,Versioned AI/ET0 true-overlap baseline,ET0-SD valid intersection area divided by polygon spherical area.,derived_source_table,analysis_release_3437
 et0_sd_true_overlap_status,Versioned AI/ET0 true-overlap baseline,ET0-SD true-overlap validity status.,derived_source_table,analysis_release_3437
 et0_sd_true_overlap_reason,Versioned AI/ET0 true-overlap baseline,ET0-SD true-overlap status reason.,derived_source_table,analysis_release_3437
-futurepop_analysis_method,Current scenario analysis baseline,"FuturePop analysis method: polygon fractional aggregation for 3,186 oases or deterministic nearest valid source grid for 257 oases.",derived_source_table,analysis_release_3437
+futurepop_analysis_method,Current scenario analysis baseline,"FuturePop analysis method: polygon fractional aggregation for 3,181 oases valid in every scenario-year combination; deterministic nearest-valid source grid for 256 oases in at least one combination.",derived_source_table,analysis_release_3437
 futurepop_analysis_valid,Current scenario analysis baseline,Boolean validity of the unified FuturePop analysis value across four scenario-year combinations.,derived_source_table,analysis_release_3437
+baseline_id,Release metadata,Public analysis baseline identifier carried by the released rows.,derived_source_table,analysis_release_3437
+block_250km,Spatial bootstrap clustering,Occupied spatial-block identifier at the 250 km sensitivity scale.,derived_source_table,analysis_release_3437
+block_500km,Spatial bootstrap clustering,Occupied spatial-block identifier at the 500 km primary scale.,derived_source_table,analysis_release_3437
+block_1000km,Spatial bootstrap clustering,"Occupied spatial-block identifier at the 1,000 km sensitivity scale.",derived_source_table,analysis_release_3437
+utci_denominator_method,ERA5-HEAT UTCI 1991-2020 exposure,Denominator rule used for the annual UTCI day-count summary.,derived_source_table| derived_source_table,analysis_release_3437
+utci_invalid_years,ERA5-HEAT UTCI 1991-2020 exposure,Number of invalid or unavailable years in the 1991-2020 UTCI denominator.,derived_source_table| derived_source_table,analysis_release_3437

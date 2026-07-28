@@ -1,6 +1,6 @@
 # Reproduction workflow
 
-**Release:** global oasis exposure — 3,437-oasis analysis
+**Release:** global oasis exposure — v1.1.4 local public candidate (3,437-oasis analysis)
 **Baseline identifier:** `analysis_release_3437` (carried by every shipped record)
 
 This document states what a third party can verify from the files in this
@@ -37,7 +37,7 @@ data/primary_estimands_31.csv           the locked result ledger (31 rows)
 data/data_dictionary.csv                field-level documentation (213 fields)
 data/source_product_manifest_current.csv    source-product manifest (10 rows)
 data/third_party_product_boundary.csv   redistribution boundary (11 rows)
-data/Source_Data_CEE_v1.xlsx            figure/table source-data workbook (35 sheets)
+data/Source_Data_CEE_v1_1_4.xlsx        figure/table source-data workbook (31 sheets)
 code/core/*.py                          non-graphical analysis modules
 scripts/reproduce.py                    the verifier entry point
 tests/verify_current_minimum.py         the minimum standalone check
@@ -79,6 +79,16 @@ Design constants, for orientation:
   The thermal-stress estimands are annual day counts named by their thresholds:
   `utci_mean_annual_days_max_ge_32c` (daily maximum UTCI ≥ 32 °C) and
   `utci_mean_annual_days_min_le_minus13c` (daily minimum UTCI ≤ −13 °C).
+- NEX-GDDP-CMIP6 summaries use a **30-model** ensemble; the released
+  `NEX_Model_IQR_24` sheet records within-oasis inter-model IQRs separately
+  from spatial-block bootstrap intervals.
+- FuturePop coverage is reported as **3,181** oases valid for every
+  scenario-year combination and **256** oases requiring nearest-valid-grid
+  substitution in at least one combination.
+- Figure 5 class summaries use oasis-area weighting for AI, ET0, ET0 SD and
+  TerraClimate variables; JRC water fractions use water-pixel-area weighting.
+  Figure 6 primary threshold summaries use lower-order oasis-unit medians and
+  IQRs at heat ≥32 °C and cold ≤−13 °C.
 
 ---
 
@@ -333,41 +343,34 @@ estimands. The released driver reproduces a subset, not the locked set.
 
 ---
 
-## 8. Spatial-scale sensitivity results
+## 8. Scope of sensitivity and scenario summaries
 
 The prose `sensitivity_summary` column of `data/primary_estimands_31.csv`
-carries booleans only (`direction_agrees`, `support_agrees`). The **numeric**
-250 km and 1,000 km intervals are published in
-`data/Source_Data_CEE_v1.xlsx`, sheet `SuppTableS8_ScaleSensitivity`: per
-estimand, the occupied block count, 95 % interval, valid and invalid replicate
-counts, and the direction/support agreement flags at each scale, alongside the
-500 km primary interval and q-value. Each cell carries a `ci_source_*` column
-naming its origin.
-
-Summary of that evidence: all 62 scale runs (31 estimands × 2 scales) agree in
-direction with the 500 km primary; 4 of 62 disagree on interval support, and
-those four are exactly what produced the `sensitive` and `not_supported`
-labels. Invalid resamples: 0 in all runs, at every scale.
+carries the locked direction/support flags. The public v1.1.4 workbook does
+not redistribute internal denominator contracts or the private scale-specific
+interval pack. It does expose the FuturePop coverage summary and the
+30-model NEX within-oasis IQR summary, which are separate from the 500 km
+spatial-block bootstrap ledger. Do not interpret the NEX IQR sheet as a
+bootstrap interval or as a future UTCI result.
 
 ---
 
 ## 9. The Source Data workbook
 
-`data/Source_Data_CEE_v1.xlsx` holds 35 sheets of source data for the figures,
-main tables and supplementary tables. Every polygon-level sheet has exactly
-3,437 rows; `Table2_Estimands` is a one-to-one copy of
-`data/primary_estimands_31.csv` with the support rule recomputed at build time.
-Its `README` sheet records the population, denominators, estimator definitions,
-unit conventions and — explicitly — every sheet and column that was *not*
-created, with the reason. Blank cells mean not estimable under the stated
-validity rule; they are never zeros.
+`data/Source_Data_CEE_v1_1_4.xlsx` holds 31 sheets of source data for the
+figures, primary estimands and supplementary summaries. Every polygon-level
+sheet has exactly 3,437 rows; `Primary_Estimands_31` has 31 rows,
+`NEX_Model_IQR_24` has 24 rows with `model_count = 30`, and
+`FuturePop_CoverageSummary` records the 3,181/256 coverage accounting. Its
+`README` and `Data_Dictionary` sheets record the population, weighting,
+threshold, unit and redistribution boundaries. Blank cells mean not
+estimable under the stated validity rule; they are never zeros.
 
-The workbook is rebuilt by `scripts/build_source_data_workbook.py`, which
-hard-codes no numeric value: every number on a data sheet is read or computed
-from the release inputs plus the locked 250/1,000 km intervals. That locked
-interval pack is not redistributed and no path to it is stored in this
-repository, so the workbook build is not runnable from a fresh clone. The
-workbook itself is shipped, so its contents remain inspectable.
+The v1.1.4 workbook is shipped as a public Source Data artifact. The
+version-specific workbook generator is kept outside the public repository
+candidate because figure/table construction scripts are not part of the
+minimal public surface; the workbook contents remain inspectable and are
+checked by `tests/verify_source_data_v1_1_4.py`.
 
 ---
 
@@ -377,12 +380,13 @@ A check that cannot be evaluated is never silently skipped and never relaxed
 into a weaker check that happens to pass. It becomes an explicit not-estimable
 record naming the subject, the reason, the affected items, the denominator, the
 consequence and the remedy. These appear under `not_estimable` in
-`reproduction_QA.json` and are printed by `scripts/reproduce.py`. Six are open
-on the current tree: the ratio column absent from the ledger, the estimand
-contract leaving 9 descriptive columns empty for 10 rows, the
-Benjamini–Hochberg replay (§6.2), 6 of 219 columns undocumented in the data
-dictionary, files present in the tree but outside the declared release surface,
-and the absent checksum baseline (§6.7).
+`reproduction_QA.json` and are printed by `scripts/reproduce.py`. Three bounded
+checks remain not-estimable on the current tree: the ratio column absent from
+the ledger, the Benjamini–Hochberg replay (§6.2), and the text-only privacy
+scan's inability to inspect spreadsheet cell contents. These are reported
+rather than silently dropped; the public data dictionary covers all 219
+analysis columns and the checksum manifest covers the declared release
+surface.
 
 Once the underlying gaps are closed, run with `--strict-ne` to promote every
 such record into a hard failure.

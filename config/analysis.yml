@@ -14,5 +14,16 @@ sensitivity_block_km:
   - 1000
 multiple_testing: Benjamini-Hochberg FDR within domain
 estimands: 31
+nex_model_count: 30
+futurepop_coverage:
+  all_scenario_year_combinations_valid: 3181
+  nearest_valid_grid_in_at_least_one_combination: 256
+figure5_weighting:
+  climate_variables: oasis-area-weighted
+  water_fraction_variables: water-pixel-area-weighted
+figure6_primary_threshold:
+  estimator: lower-order oasis-unit median with IQR
+  heat: ">=32 degC"
+  cold: "<=-13 degC"
 ai_scale_factor: 0.0001
 third_party_raw_data_redistributed: false

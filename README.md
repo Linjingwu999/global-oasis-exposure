@@ -1,6 +1,6 @@
-# Global oasis exposure: 3,437-oasis analysis — v1.1.5
+# Global oasis exposure: 3,437-oasis analysis — v1.1.6
 
-This repository contains the minimum author-created derived data and non-graphical analysis modules for the v1.1.5 3,437-oasis analysis population.
+This repository contains the minimum author-created derived data, analysis modules and supplementary tables for the v1.1.6 3,437-oasis analysis population.
 
 ## Included
 
@@ -8,6 +8,7 @@ This repository contains the minimum author-created derived data and non-graphic
 - 31 primary estimand records and their analysis definitions
 - Core non-graphical inference modules, a pinned Python environment, and structural verification tests
 - `Source_Data_CEE_v1_1_4.xlsx`, the 31-sheet Source Data workbook underlying the manuscript figures and tables
+- `Supplementary_Information.pdf`, containing Supplementary Tables 1–3
 - Public product-version, citation, and redistribution-boundary metadata
 - Third-party data notices
 
@@ -25,6 +26,7 @@ This release is aligned to 3,437 oases, 31 primary comparisons, a 30-model NEX e
 | `data/primary_estimands_31.csv` | The 31 locked primary estimates, intervals, q-values and support classes |
 | `config/estimands_31.csv` | The estimand contract each result is computed from |
 | `data/Source_Data_CEE_v1_1_4.xlsx` | 31-sheet Source Data for the manuscript figures and tables |
+| `supplementary/Supplementary_Information.pdf` | Supplementary Information containing Supplementary Tables 1–3 |
 
 ```
 python scripts/reproduce.py
@@ -36,7 +38,7 @@ which puts the directory on the path itself.
 
 ## Not included
 
-No oasis boundary geometries, third-party rasters, NetCDF files, downloaded archives, rendered figure exports, figure-plotting or layout code, Word/PDF construction code, manuscripts, supplementary manuscripts, credentials, or local filesystem paths are included. The v1.1.4 workbook generator is kept outside this public repository; the workbook itself is the public Source Data artifact.
+No oasis boundary geometries, third-party rasters, NetCDF files, downloaded archives, rendered figure exports, figure-plotting or layout code, Word/PDF construction code, main manuscript, editable supplementary source, credentials, or local filesystem paths are included. The v1.1.4 workbook generator is kept outside this public repository; the workbook itself is the public Source Data artifact.
 
 ## Reproduction boundary
 

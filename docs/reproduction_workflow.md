@@ -1,6 +1,6 @@
 # Reproduction workflow
 
-**Release:** global oasis exposure — v1.1.5 (3,437-oasis analysis)
+**Release:** global oasis exposure — v1.1.6 (3,437-oasis analysis)
 **Baseline identifier:** `analysis_release_3437` (carried by every shipped record)
 
 This document states what a third party can verify from the files in this
@@ -38,6 +38,7 @@ data/data_dictionary.csv                field-level documentation (213 fields)
 data/source_product_manifest_current.csv    source-product manifest (10 rows)
 data/third_party_product_boundary.csv   redistribution boundary (11 rows)
 data/Source_Data_CEE_v1_1_4.xlsx        figure/table source-data workbook (31 sheets)
+supplementary/Supplementary_Information.pdf    Supplementary Tables 1–3
 code/core/*.py                          non-graphical analysis modules
 scripts/reproduce.py                    the verifier entry point
 tests/verify_current_minimum.py         the minimum standalone check

@@ -1,5 +1,5 @@
 project: global-oasis-exposure
-release_version: 1.1.5
+release_version: 1.1.6
 analysis_population: 3437
 excluded_identifiers: 6
 analysis_regions:
